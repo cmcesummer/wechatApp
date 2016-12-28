@@ -1,0 +1,22 @@
+<!--index.wxml-->
+<view class="container">
+  <view  bindtap="bindViewTap" class="userinfo">
+    <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+    <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+  </view>
+  <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+    <text wx:if="{{motto=='Hello World'}}"  class="user-motto">{{myText}}</text>
+    <text wx:else class="user-motto">{{myText2}}</text>
+    <button bindtap="bindtapButton">123</button>
+  </view>
+
+  <view wx:for="{{arrPeople}}" wx:for-index="id" wx:for-item="item" wx:key>
+    {{id + 1}}号 ： {{item.name}},{{item.age}}
+  </view>
+  
+  <view wx:for="{{requestAjax}}" wx:for-index='id' wx:for-item="item" wx:key="{{item.id}}">
+    {{id}} , {{item.id}},{{item.name}},{{item.score}}
+  </view>
+
+</view>
