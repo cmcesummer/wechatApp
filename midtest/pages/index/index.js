@@ -8,7 +8,8 @@ Page({
     myText: 'hehe1',
     myText2:'hehe2',
     arrPeople:[{name:'sb1',age:11},{name:'sb2',age:12},{name:'sb3',age:13}],
-    requestAjax: ''
+    requestAjax: '',
+    myImg: null
   },
 
   //事件处理函数  bindbindtap 是点击事件
@@ -21,6 +22,17 @@ Page({
   bindtapButton: function() {
     this.setData({    //this.setData 跟react类似 重设 mymyText的值
       myText: '123'
+    })
+    var that = this;
+    wx.chooseImage({
+      count: 9, // 最多可以选择的图片张数，默认9
+      sizeType: ['original', 'compressed'], // original 原图，compressed 压缩图，默认二者都有
+      sourceType: ['album', 'camera'], // album 从相册选图，camera 使用相机，默认二者都有
+      success: function(res){
+        that.setData({
+          myImg: res.tempFilePaths
+        })
+      }
     })
   },
 

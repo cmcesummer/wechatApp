@@ -19,4 +19,8 @@
     {{id}} , {{item.id}},{{item.name}},{{item.score}}
   </view>
 
+  <view>
+    <image wx:if="{{myImg!=null}}" src="{{myImg}}"></image>
+  </view>
+
 </view>
