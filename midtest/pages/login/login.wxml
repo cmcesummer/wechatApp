@@ -1,0 +1,12 @@
+<!--index.wxml-->
+<form bindsubmit="formSubmit">
+    <view class="container">
+
+        <input name="userName" type="text" class="myinput" placeholder="请输入用户名" value="{{userName}}"/>
+
+        <input name="userPass" type="text" class="myinput" placeholder="请输入密码 " password value="{{userPass}}"/>
+
+        <button formType="submit">记住我</button>
+
+    </view>
+</form>

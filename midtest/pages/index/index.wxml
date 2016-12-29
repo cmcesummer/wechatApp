@@ -3,11 +3,11 @@
 
   <view  bindtap="bindViewTap" class="userinfo">
     <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
-    <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    <text class="userinfo-nickname" >{{userInfo.nickName}}</text>
   </view>
 
   <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
+    <text class="user-motto" bindtap="thirdbind">{{motto}}</text>
     <text wx:if="{{motto=='Hello World'}}"  class="user-motto">{{myText}}</text>
     <text wx:else class="user-motto">{{myText2}}</text>
     <button bindtap="bindtapButton">123</button>

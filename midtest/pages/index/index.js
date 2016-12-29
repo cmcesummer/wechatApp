@@ -46,6 +46,12 @@ Page({
     })
   },
 
+  thirdbind: function() {
+    wx.navigateTo({
+      url: '../login/login'
+    })
+  },
+
   bindtapButton: function() {
     this.setData({    //this.setData 跟react类似 重设 mymyText的值
       myText: '123'
