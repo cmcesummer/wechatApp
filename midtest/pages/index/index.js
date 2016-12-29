@@ -9,9 +9,36 @@ Page({
     myText2:'hehe2',
     arrPeople:[{name:'sb1',age:11},{name:'sb2',age:12},{name:'sb3',age:13}],
     requestAjax: '',
-    myImg: null
+    myImg: null,
+    objectArray: [
+      {id: 5, unique: 'unique_5'},
+      {id: 4, unique: 'unique_4'},
+      {id: 3, unique: 'unique_3'},
+      {id: 2, unique: 'unique_2'},
+      {id: 1, unique: 'unique_1'},
+      {id: 0, unique: 'unique_0'},
+    ],
   },
-
+  switch: function(e) {
+    const length = this.data.objectArray.length
+    for (let i = 0; i < length; ++i) {
+      const x = Math.floor(Math.random() * length)
+      const y = Math.floor(Math.random() * length)
+      const temp = this.data.objectArray[x]
+      this.data.objectArray[x] = this.data.objectArray[y]
+      this.data.objectArray[y] = temp
+    }
+    this.setData({
+      objectArray: this.data.objectArray
+    })
+  },
+  addToFront: function(e) {
+    const length = this.data.objectArray.length
+    this.data.objectArray = [{id: length, unique: 'unique_' + length}].concat (this.data.objectArray)
+    this.setData({
+      objectArray: this.data.objectArray
+    })
+  },
   //事件处理函数  bindbindtap 是点击事件
   bindViewTap: function() {
     wx.navigateTo({   //微信内置函数，用于页面跳转。

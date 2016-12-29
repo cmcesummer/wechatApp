@@ -1,9 +1,11 @@
 <!--index.wxml-->
 <view class="container">
+
   <view  bindtap="bindViewTap" class="userinfo">
     <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
     <text class="userinfo-nickname">{{userInfo.nickName}}</text>
   </view>
+
   <view class="usermotto">
     <text class="user-motto">{{motto}}</text>
     <text wx:if="{{motto=='Hello World'}}"  class="user-motto">{{myText}}</text>
@@ -22,5 +24,13 @@
   <view>
     <image wx:if="{{myImg!=null}}" src="{{myImg}}"></image>
   </view>
+
+
+
+  <switch wx:for="{{objectArray}}" wx:key="id" style="display: block;"> 
+    {{item.id}} 
+  </switch>
+  <button bindtap="switch"> Switch </button>
+  <button bindtap="addToFront"> Add to the front </button>
 
 </view>
