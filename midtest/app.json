@@ -3,7 +3,8 @@
     "pages/test/test",
     "pages/index/index",
     "pages/logs/logs",
-    "pages/login/login"
+    "pages/login/login",
+    "pages/wcharts/wcharts"
   ],
   "window":{
     "enablePullDownRefresh":"true",
