@@ -1,0 +1,8 @@
+# Object file
+*.o
+
+# Ada Library Information
+*.ali
+
+charts-node/node_modules
+npm-debug.log
