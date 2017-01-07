@@ -1,0 +1,12 @@
+/* pages/upload/upload.wxss */
+.imginfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center
+}
+
+.myimg {
+    width:70rpx;
+    height:70rpx;
+    border:1px solid #ccc
+}

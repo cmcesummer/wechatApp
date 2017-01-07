@@ -1,7 +1,7 @@
 <scroll-view scroll-y="true" claas="test-scrollView" bindscrolltolower="lower" bindscrolltoupper="upper" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
     <view id="green" bindtap="toindex" class="scroll-view-item bc_green">1 index</view>
     <view id="red" bindtap="tocharts" class="scroll-view-item bc_red">2 webSocket</view>
-    <view id="yellow" class="scroll-view-item bc_yellow">3</view>
+    <view id="yellow"  bindtap="toupload" class="scroll-view-item bc_yellow">3 upload</view>
     <view id="blue" class="scroll-view-item bc_blue">4</view>
 
 </scroll-view>

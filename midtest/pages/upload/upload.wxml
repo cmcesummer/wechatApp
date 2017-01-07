@@ -1,0 +1,11 @@
+<!--pages/upload/upload.wxml-->
+<text>pages/upload/upload.wxml</text>
+<view class="container">
+    <button type="primary" bindtap="uploadImg">上传图片</button>
+
+    <view class="imginfo" wx:key="id" wx:for="{{imgList}}" wx:for-index="{{imgList}}" wx:for-item="item">
+
+        <image src="{{item}}" bindtap="previewImg" data-imgId="{{id}}" class="myImg"></image>
+
+    </view>
+</view>

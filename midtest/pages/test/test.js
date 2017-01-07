@@ -8,6 +8,11 @@ Page({
         wx.navigateTo({
             url:'../wcharts/wcharts'
         })
+    },
+    toupload: () => {
+        wx.navigateTo({
+          url: '../upload/upload'
+        })
     }
 
 })
