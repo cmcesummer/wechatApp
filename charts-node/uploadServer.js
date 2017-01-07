@@ -18,10 +18,10 @@ app.post('/postformdata', function(req, res) {
 			res.send(err);
 			return
 		}
-		var avatarName = Date.new() + '.jpg';
+		var avatarName = Date.now() + '.jpg';
 		var newPath = form.uploadDir + avatarName; //新路径 时间戳为名字
 		//fs.renameSync(oldPath,newPath)
-		fs.renameSync(file.my_upload.path, newPath) //my_upload就是前端设置的name,将图片存储下来并重命名  这里第一个参数还不懂，结合前端猜想一下吧
+		fs.renameSync(files.my_upload.path, newPath) 
 		res.send({
 			code:200,
 			path:'http://127.0.0.1:8000/' + newPath
