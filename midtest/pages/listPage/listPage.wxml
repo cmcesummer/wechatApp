@@ -1,4 +1,7 @@
 <!--pages/listPage/listPage.wxml-->
+<loading hidden="{{isLoading}}">
+    loading...
+</loading>
 
 <view class="box">
 

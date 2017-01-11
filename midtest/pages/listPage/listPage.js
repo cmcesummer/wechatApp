@@ -3,7 +3,8 @@ Page({
   data:{
     list:[],
     page: 1,
-    bottomList:[]
+    bottomList:[],
+    isLoading: true
   },
   listAjax(type,page) {
      let that = this;
@@ -17,16 +18,26 @@ Page({
                   list: data
               })
             } else if(type == 'pullDown') {
+                that.setData({
+                    isLoading:false
+                 })
                 setTimeout(function(){
                   wx.stopPullDownRefresh();
                   that.setData({
-                      list: data
+                      list: data,
+                      isLoading: true
                   })
-                }, 500)
+                }, 1500)
             } else if(type == 'bottom') {
                 that.setData({
-                   bottomList: data
+                  isLoading:false
                 })
+                setTimeout(function(){
+                  that.setData({
+                     bottomList: data,
+                     isLoading:true
+                  })  
+                },1000)
             }
         }
       })
