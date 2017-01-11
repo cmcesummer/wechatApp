@@ -27,7 +27,7 @@
 
 
 
-  <switch wx:for="{{objectArray}}" wx:key="id" style="display: block;"> 
+  <switch wx:for="{{objectArray}}" wx:key="unique" style="display: block;"> 
     {{item.id}} 
   </switch>
   <button bindtap="switch"> Switch </button>

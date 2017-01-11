@@ -1,18 +1,24 @@
 Page({
-    toindex:() => {
+    toindex() {
         wx.navigateTo({   
             url: '../index/index'
         })
     },
-    tocharts:() => {
+    tocharts() {
         wx.navigateTo({
             url:'../wcharts/wcharts'
         })
     },
-    toupload: () => {
+    toupload() {
         wx.navigateTo({
           url: '../upload/upload'
+        })
+    },
+    tolistPage() {
+        wx.navigateTo({
+          url: '../listPage/listPage'
         })
     }
 
 })
+

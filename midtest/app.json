@@ -5,7 +5,8 @@
     "pages/logs/logs",
     "pages/login/login",
     "pages/wcharts/wcharts",
-    "pages/upload/upload"
+    "pages/upload/upload",
+    "pages/listPage/listPage"
   ],
   "window":{
     "enablePullDownRefresh":"true",
